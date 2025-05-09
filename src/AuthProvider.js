@@ -8,7 +8,6 @@ import { onIdTokenChanged } from './auth';
 export function AuthProvider({ children, initialUser }) {
     const [user, setUser] = useState(initialUser);
     const [pro, setPro] = useState(false);
-    const [loading, setLoading] = useState(!initialUser); // If we have initialUser, we're not loading
 
     useEffect(() => {
         return onIdTokenChanged(async (user) => {
@@ -32,7 +31,6 @@ export function AuthProvider({ children, initialUser }) {
             value={{
                 user,
                 pro: pro ?? false,
-                loading
             }}
         >
             {children}
