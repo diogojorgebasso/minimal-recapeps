@@ -1,5 +1,4 @@
 "use client";
-import { auth } from "@/clientApp";
 import { signInWithGoogle } from "../../auth";
 
 export default function Login() {
