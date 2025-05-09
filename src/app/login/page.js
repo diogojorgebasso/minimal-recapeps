@@ -9,7 +9,7 @@ export default function Login() {
     }
     return (
         <form >
-            <input type="button" onClick={signInWithGoogle} value="Sign in with Google" />
+            <input type="button" onClick={handleWithGoogle} value="Sign in with Google" />
         </form>
     )
 }
