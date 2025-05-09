@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { AuthContext } from './useAuth';
 import { setCookie, deleteCookie } from "cookies-next";
-import { onIdTokenChanged } from '@/lib/firebase/auth';
+import { onIdTokenChanged } from './auth';
 
 export function AuthProvider({ children, initialUser }) {
     const [user, setUser] = useState(initialUser);

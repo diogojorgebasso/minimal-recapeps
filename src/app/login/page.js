@@ -1,11 +1,11 @@
 "use client";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "@/clientApp";
+import { signInWithGoogle } from "../../auth";
 
 export default function Login() {
-    const signInWithGoogle = async (event) => {
+    const handleWithGoogle = async (event) => {
         event.preventDefault();
-        signInWithPopup(auth, new GoogleAuthProvider())
+        signInWithGoogle()
     }
     return (
         <form >
