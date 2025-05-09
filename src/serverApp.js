@@ -38,7 +38,8 @@ export async function getAuthenticatedAppForUser() {
                 const claims = JSON.parse(decoded);
                 isPro = claims.pro === true;
             }
-        } catch (error) {
+        }
+        catch (error) {
             console.error("Error decoding JWT token:", error);
         }
 
